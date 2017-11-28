@@ -4,6 +4,8 @@
 
 //the order of seeking for modules: .js, .node, .json
 
+//module.exports = exports = this
+
 var phrases = require('./ru');
 
 function User(name) {
@@ -16,4 +18,4 @@ User.prototype.hello = function (who) {
 
 console.log("user.js is required");
 
-global.User = User;
+module.exports = User;

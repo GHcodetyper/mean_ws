@@ -43,9 +43,17 @@
 //     console.log('Example app listening on port 3000!')
 // })
 
-var user = require('./user');
+function run() {
+    var User = require('./user');
 
-var vasya = new User("Vasya");
-var petya = new User("Petya");
+    var vasya = new User("Vasya");
+    var petya = new User("Petya");
 
-vasya.hello(petya);
+    vasya.hello(petya);
+}
+
+if (module.parent) {
+    exports.run = run;
+} else {
+    run();
+}
