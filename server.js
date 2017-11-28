@@ -43,13 +43,20 @@
 //     console.log('Example app listening on port 3000!')
 // })
 
+var db = require('_mym/db'); //the unified path relating a project root
+db.connect();
+
+var User = require('./user');
+
+
+
 function run() {
-    var User = require('./user');
 
     var vasya = new User("Vasya");
     var petya = new User("Petya");
 
     vasya.hello(petya);
+    console.log(db.getPhrase("Run successful"));
 }
 
 if (module.parent) {
