@@ -9,14 +9,16 @@
 var db = require('_mym/db'); //the unified path relating a project root
 //db.connect();
 
+var log = require('_mym/logger')(module);
+
 function User(name) {
     this.name = name;
 }
 
 User.prototype.hello = function (who) {
-    console.log(db.getPhrase("Hello") + ', ' + who.name);
+    log(db.getPhrase("Hello") + ', ' + who.name);
 }
 
-console.log("user.js is required");
+log("user.js is required");
 
 module.exports = User;

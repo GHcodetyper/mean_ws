@@ -46,6 +46,9 @@
 var db = require('_mym/db'); //the unified path relating a project root
 db.connect();
 
+var log = require('_mym/logger')(module);
+
+
 var User = require('./user');
 
 
@@ -56,7 +59,7 @@ function run() {
     var petya = new User("Petya");
 
     vasya.hello(petya);
-    console.log(db.getPhrase("Run successful"));
+    log(db.getPhrase("Run successful"));
 }
 
 if (module.parent) {
