@@ -1,0 +1,11 @@
+{
+  "name": "4top",
+  "version": "1.0.0",
+  "description": "",
+  "main": "inspect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
